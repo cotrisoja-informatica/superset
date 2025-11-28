@@ -271,6 +271,6 @@ RUN apt-get update && \
 
 COPY requirements-local.txt /app/requirements-local.txt
 
-RUN pip install --no-cache-dir -r /app/requirements-local.txt
+RUN /app/.venv/bin/pip install --no-cache-dir -r /app/requirements-local.txt
 
 USER superset
