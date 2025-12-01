@@ -134,3 +134,7 @@ CLAUDE.local.md
 .claude_rc*
 .env.local
 PROJECT.md
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
