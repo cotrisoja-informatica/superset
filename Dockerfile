@@ -232,6 +232,10 @@ RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
 # Install the superset package
 RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
     uv pip install -e .
+
+RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
+    uv pip install python-ldap
+
 RUN python -m compileall /app/superset
 
 USER superset
