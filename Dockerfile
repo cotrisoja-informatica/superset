@@ -168,7 +168,7 @@ RUN mkdir -p \
 ENV PLAYWRIGHT_BROWSERS_PATH=/usr/local/share/playwright-browsers
 
 ARG INCLUDE_CHROMIUM="false"
-ARG INCLUDE_FIREFOX="false"
+ARG INCLUDE_FIREFOX="true"
 RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
     if [ "${INCLUDE_CHROMIUM}" = "true" ] || [ "${INCLUDE_FIREFOX}" = "true" ]; then \
         uv pip install playwright && \
