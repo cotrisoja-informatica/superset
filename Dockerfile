@@ -165,9 +165,9 @@ RUN mkdir -p \
     && touch superset/static/version_info.json
 
 # Install Playwright and optionally setup headless browsers
-ENV PLAYWRIGHT_BROWSERS_PATH=/usr/local/share/playwright-browsers
+ENV PLAYWRIGHT_BROWSERS_PATH=/opt/playwright
 
-ARG INCLUDE_CHROMIUM="false"
+ARG INCLUDE_CHROMIUM="true"
 ARG INCLUDE_FIREFOX="true"
 RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
     if [ "${INCLUDE_CHROMIUM}" = "true" ] || [ "${INCLUDE_FIREFOX}" = "true" ]; then \
