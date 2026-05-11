@@ -487,3 +487,4 @@ zstandard==0.23.0
     # via flask-compress
 
 python-ldap
+psycopg2-binary
